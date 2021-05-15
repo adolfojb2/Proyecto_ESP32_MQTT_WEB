@@ -1,0 +1,73 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<div class="contenido pb-4 pt-4"> 
+    <div class="row">
+         <div class="col-md-12 pt-4 pb-4">
+            <h1 class="text-center"><strong>Apartamentos disponibles</strong></h1>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+         <div class="col-lg-8 col-lg-4 pt-4 pb-4">
+            <h2>Barrio San Isidro</h2>
+            <p class="text-justify">
+                <b>Descripción:</b> El apartamento cuenta con 2 habitaciones, un baño, cocina enchapada, patio interno con lavadero y garaje para moto o bicicleta.
+            </p>
+            <p><b>Precio: $450.000</b></p>
+        </div>
+        <div class="col-lg-8 col-lg-4 pt-4 pb-4">
+            <h2>Barrio San Rafael</h2>
+            <p class="text-justify">
+                Bootstrap: es una biblioteca multiplataforma o conjunto de herramientas de código abierto para diseño de sitios y aplicaciones web.
+            </p>
+        </div>
+        <div class="col-lg-8 col-lg-4 pt-4 pb-4">
+            <h2>Barrio el Portal de san juan</h2>
+            <p class="text-justify">
+                Jinja2: Es un motor de plantillas web para el lenguaje de programación Python. Fue creado por Armin Ronacher y está licenciado bajo una Licencia BSD.
+            </p>
+        </div>
+    </div>
+    
+        <form action="/apartamentos" method="post"> 
+        <h1>Ejercicio 1</h1>
+        <p>Ingrese dos números para calcular varias operaciones matemáticas con ellos y mostrar sus resultados en una tabla.</p>
+        <div class="form-group">
+        <label for="exampleInputEmail1">Ingrese el primer número</label>
+        <input type="text" class="form-control" name="n1" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="ingrese el número">
+        </div>
+         <div class="form-group">
+        <label for="exampleInputEmail1">Ingrese el segundo número</label>
+        <input type="text" class="form-control" name="n2" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="ingrese el número">
+        </div>
+        <div>
+         <button type="submit" class="btn btn-primary">Calcular</button>
+        </div>
+        </form>
+        <br>
+        <h1>Resultados</h1>
+        <table class="table table-hover">
+        <thead>
+            <tr>
+              <th scope="col">Numero 1</th>
+              <th scope="col">Numero 2</th>
+              <th scope="col">Suma</th>
+              <th scope="col">Resta</th>
+              <th scope="col">Raiz</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{ n1 }}</td>
+              <td>{{ n2 }}</td>
+              <td>{{ sum }}</td>
+              <td>{{ rest }}</td>
+              <td>{{ raizz }}</td>
+            </tr>
+          </tbody>
+        </table>
+
+</div>
+
+{% endblock %}
+
